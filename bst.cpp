@@ -69,14 +69,12 @@ class BST {
             p->left = Remove(x, p->left);
         else if(x > p->data)
             p->right = Remove(x, p->right);
-        else if(p->left && p->right)
-        {
+        else if(p->left && p->right){
             temp = findMin(p->right);
             p->data = temp->data;
             p->right = Remove(p->data, p->right);
         }
-        else
-        {
+        else{
             temp = p;
             if(p->left == NULL)
                 p = p->right;
@@ -84,7 +82,6 @@ class BST {
                 p = p->left;
             delete temp;
         }
-
         return p;
     }
 
