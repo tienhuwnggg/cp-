@@ -88,15 +88,15 @@ class BST {
         return p;
     }
 
-        void Inorder(Node* p) {
-            if(p == NULL)
-                return;
-            Inorder(p->left);
-            cout << p->data << " ";
-            Inorder(p->right);
-        }
+    void Inorder(Node* p){
+        if(p == NULL)
+            return;
+        Inorder(p->left);
+        cout << p->data << " ";
+        Inorder(p->right);
+    }
 
-    Node* Find(Node* p, int x) {
+    Node* Find(Node* p, int x){
         if(p == NULL)
             return NULL;
         else if(x < p->data)
@@ -106,6 +106,7 @@ class BST {
         else
             return p;
     }
+    
 };
 
 int main(int argc, const char * argv[]) {
